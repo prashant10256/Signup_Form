@@ -1,33 +1,23 @@
-const signup = document.getElementById("signupform");
+// const signup = document.getElementById("signupform");
 
-signup.addEventListener("submit", function (eveent) {
-  eveent.preventDefault();
+document
+  .getElementById("signupform")
+  .addEventListener("submit", function (event) {
+    // Prevent the default form submission
+    event.preventDefault();
 
-  // Get form values
-  var firstName = document.getElementById("firstName").value;
-  var lastName = document.getElementById("lastName").value;
-  var email = document.getElementById("email").value;
-  var phone = document.getElementById("phone").value;
-  var address = document.getElementById("address").value;
-  var street = document.getElementById("street").value;
-  var locality = document.getElementById("locality").value;
-  var city = document.getElementById("city").value;
-  var state = document.getElementById("state").value;
-  var pincode = document.getElementById("pincode").value;
+    // Get form values
+    var form = document.getElementById("signupform");
 
-  var formData = {
-    firstName: firstName,
-    lastName: lastName,
-    email: email,
-    phone: phone,
-    address: address,
-    street: street,
-    locality: locality,
-    city: city,
-    state: state,
-    pincode: pincode,
-  };
-  console.log(formData);
+    var form = document.getElementById("signupform");
+    var formData = {};
 
-  console.log("submit form");
-});
+    for (var i = 0; i < form.elements.length; i++) {
+      var element = form.elements[i];
+      if (element.type !== "button") {
+        formData[element.name] = element.value;
+      }
+    }
+    event.target.reset();
+    console.log(formData);
+  });
