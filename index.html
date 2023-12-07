@@ -3,70 +3,180 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form</title>
-    <link rel="stylesheet" href="form.css" />
+    <title>Document</title>
   </head>
   <body>
-    <form id="signupform">
-      <label for="name">First Name:</label>
-      <input
-        type="text"
-        id="name"
-        name="firstName"
-        placeholder="firstName"
-        required
-      />
-      <label for="lastName">Last Name:</label>
-      <input
-        type="text"
-        id="lastName"
-        name="lastName"
-        placeholder="last name"
-        required
-      />
-      <label for="email">Email:</label>
-      <input type="text" id="email" name="email" placeholder="email" required />
-      <label for="phone">Phone:</label>
-      <input type="text" id="phone" name="phone" placeholder="phone" required />
-      <label for="address">Address:</label>
-      <input
-        type="text"
-        id="address"
-        name="address"
-        id=""
-        placeholder="address"
-        required
-      />
-      <label for="street">Street:</label>
-      <input
-        type="text"
-        id="street"
-        name="street"
-        placeholder="street"
-        required
-      />
-      <label for="locality">Locality:</label>
-      <input
-        type="text"
-        id="locality"
-        name="locality"
-        placeholder="locality"
-        required
-      />
-      <label for="city">City:</label>
-      <input type="text" id="city" name="city" placeholder="city" required />
-      <label for="state">State</label>
-      <input type="text" id="state" name="state" placeholder="state" required />
-      <label for="pincode">Pincode:</label>
-      <input
-        type="text"
-        id="pincode"
-        name="pincode"
-        placeholder="pincode"
-        required
-      />
-      <button type="submit">SignUp</button>
-    </form>
-    <script src="signup.js"></script>
+    <script type="text/javascript">
+      // create form element
+      const form = document.createElement("form");
+
+      // create lable and input for the user firstName
+      const firstName = document.createElement("label");
+      firstName.innerText = "firstName: ";
+      const usernameInput = document.createElement("input");
+      usernameInput.setAttribute("type", "text");
+      usernameInput.setAttribute("name", "firstName");
+
+      // create lable and input for the user lastName
+      const lastName = document.createElement("label");
+      lastName.innerText = "lastName: ";
+      const lastNameInput = document.createElement("input");
+      lastNameInput.setAttribute("type", "text");
+      lastNameInput.setAttribute("name", "lastName");
+
+      // create lable and input for the user email
+      const email = document.createElement("lable");
+      email.innerText = "email: ";
+      const emailInput = document.createElement("input");
+      emailInput.setAttribute("type", "text");
+      emailInput.setAttribute("name", "email");
+
+      // create lable and input for the user email
+      const phone = document.createElement("lable");
+      phone.innerText = "phone: ";
+      const phoneInput = document.createElement("input");
+      phoneInput.setAttribute("type", "text");
+      phoneInput.setAttribute("name", "phone");
+
+      // create lable and input for the user address
+      const address = document.createElement("lable");
+      address.innerText = "address: ";
+      const addressInput = document.createElement("input");
+      addressInput.setAttribute("type", "text");
+      addressInput.setAttribute("name", "address");
+
+      // create lable and input for the user street
+      const street = document.createElement("lable");
+      street.innerText = "street: ";
+      var streetInput = document.createElement("input");
+      streetInput.setAttribute("type", "text");
+      streetInput.setAttribute("name", "street");
+
+      // create lable and input for the user locality
+      const locality = document.createElement("lable");
+      locality.innerText = "locality: ";
+      const localityInput = document.createElement("input");
+      localityInput.setAttribute("type", "text");
+      locality.setAttribute("name", "locality");
+
+      // create lable and input for the user city
+      const city = document.createElement("lable");
+      city.innerText = "city: ";
+      const cityInput = document.createElement("input");
+      cityInput.setAttribute("type", "text");
+      cityInput.setAttribute("name", "city");
+
+      // create lable and input for the user state
+      const state = document.createElement("lable");
+      state.innerText = "state: ";
+      const stateInput = document.createElement("input");
+      stateInput.setAttribute("type", "text");
+      stateInput.setAttribute("name", "city");
+
+      // create lable and input for the user pincode
+      const pincode = document.createElement("lable");
+      pincode.innerText = "pincode: ";
+      const pincodeInput = document.createElement("input");
+      pincodeInput.setAttribute("type", "text");
+      pincodeInput.setAttribute("name", "pincode");
+
+      // create a submit button
+      const submitButton = document.createElement("button");
+      submitButton.textContent = "SignUp";
+
+      //Set class names for styling
+
+      form.classList.add("signup-form");
+      firstName.classList.add("form-label");
+      lastNameInput.classList.add("form-lable");
+      emailInput.classList.add("email-lable");
+      phoneInput.classList.add("phone-lable");
+      addressInput.classList.add("address-lable");
+      addressInput.classList.add("street-lable");
+      localityInput.classList.add("locality-lable");
+      cityInput.classList.add("city-lable");
+      stateInput.classList.add("state-lable");
+      pincodeInput.classList.add("pincode-lable");
+      submitButton.classList.add("form-button");
+      // usernameInput.classList.add("form-input");
+
+      // append element to the form
+      form.appendChild(firstName);
+      form.appendChild(usernameInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(lastName);
+      form.appendChild(lastNameInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(email);
+      form.appendChild(emailInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(phone);
+      form.appendChild(phoneInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(address);
+      form.appendChild(addressInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(street);
+      form.appendChild(streetInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(locality);
+      form.appendChild(localityInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(city);
+      form.appendChild(cityInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(state);
+      form.appendChild(stateInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(pincode);
+      form.appendChild(pincodeInput);
+      form.appendChild(document.createElement("br"));
+      form.appendChild(document.createElement("br"));
+      form.appendChild(submitButton);
+
+      // append the form to the body of the document
+      document.body.appendChild(form);
+
+      // Add event listener for form submission
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevents the form from actually submitting
+
+        const formbValue = event.target.value;
+
+        // Retrieve form values
+        var firstnameValue = usernameInput.value;
+        var lastnameValue = lastNameInput.value;
+        var emailValue = emailInput.value;
+        var phoneValue = phoneInput.value;
+        var addressValue = addressInput.value;
+        var streetValue = streetInput.value;
+        var localityValue = localityInput.value;
+        var cityValue = cityInput.value;
+        var stateValue = stateInput.value;
+        var pincodeValue = pincodeInput.value;
+
+        // print form values to the console
+        console.log("firstname:", firstnameValue);
+        console.log("lastName:", lastnameValue);
+        console.log("email", emailValue);
+        console.log("phone", phoneValue);
+        console.log("address", addressValue);
+        console.log("address", streetValue);
+        console.log("locality", localityValue);
+        console.log("city", cityValue);
+        console.log("state", stateValue);
+        console.log("pincode", pincodeValue);
+        form.reset();
+      });
+    </script>
   </body>
 </html>
